@@ -3,9 +3,6 @@
     padding: 0;
 }
 /*botones*/
-.nav{
-    display: none;
-}
 .botones{
     font-family: "Comic Sans MS";
     display: flex;
@@ -20,12 +17,22 @@
     margin: auto;
     margin-top: 30px;
 }
+.live:hover{
+    color: #736AB5;
+    background-color: white;
+    transition: width 200ms ease-in;
+}
 .theories{
     background-color: #736AB5;
     color: white;
     border: solid 1px black;
     margin: auto;
     margin-top: 30px;
+}
+.theories:hover{
+    color: #736AB5;
+    background-color: white;
+    transition: width 200ms ease-in;
 }
 .albums{
     background-color: #736AB5;
@@ -34,6 +41,11 @@
     margin: auto;
     margin-top: 30px;
 }
+.albums:hover{
+    color: #736AB5;
+    background-color: white;
+    transition: width 200ms ease-in;
+}
 .contact{
     background-color: #736AB5;
     color: white;
@@ -41,6 +53,11 @@
     margin: auto;
     margin-top: 30px;
     }
+.contact:hover{
+    color: #736AB5;
+    background-color: white;
+    transition: width 200ms ease-in;
+}
 .index{
     background-color: #736AB5;
     color: white;
@@ -49,8 +66,10 @@
     margin: auto;
     margin-top: 30px;
 }
-li{
-    list-style: none;
+.index:hover{
+    color: #736AB5;
+    background-color: white;
+    transition: width 200ms ease-in;
 }
 /*index*/
 .container1{
