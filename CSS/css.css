@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*botones*/
+.nav{
+    display: none;
+}
+.botones{
+    font-family: "Comic Sans MS";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+.live{
+    background-color: #736AB5;
+    color:white;
+    border: solid 1px black;
+    margin: auto;
+    margin-top: 30px;
+}
+.theories{
+    background-color: #736AB5;
+    color: white;
+    border: solid 1px black;
+    margin: auto;
+    margin-top: 30px;
+}
+.albums{
+    background-color: #736AB5;
+    color: white;
+    border: solid 1px black;
+    margin: auto;
+    margin-top: 30px;
+}
+.contact{
+    background-color: #736AB5;
+    color: white;
+    border: solid 1px black;
+    margin: auto;
+    margin-top: 30px;
+    }
+.index{
+    background-color: #736AB5;
+    color: white;
+    border: solid 1px black;
+    display: inline-block;
+    margin: auto;
+    margin-top: 30px;
+}
+li{
+    list-style: none;
+}
+/*index*/
+.container1{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 1.5fr 1.2fr 0.7fr;
+    grid-template-areas: 
+    "header"
+    "section1"
+    "section2"
+    "footer";
+}
+.header{
+    background-image: url(../img/menu1.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-area: header;
+    width: 100%;
+}
+.imagen1{
+    grid-area: section1;
+    width: 100%;
+}
+.imagen2{
+    grid-area: section2;
+    width: 100%;
+}
+.footer{
+    grid-area: footer;
+    width: 100%;
+    background-color:rgb(121, 109, 109);
+}
+/*live*/
+.container2{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 800px auto;
+    grid-template-areas: 
+    "header"
+    "background"
+    "footer";
+}
+.livebackground{
+    grid-area: background;
+    background-image: url(../img/Taylor\ live.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    grid-template-rows: repeat(3, 32%);
+    grid-template-areas:
+    ". iframe ."
+    ". iframe ."
+    ". iframe .";
+}
+.iframe{
+    grid-area: iframe;
+    width: 150%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+/*theories*/
+.container3{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 800px auto;
+    grid-template-areas: 
+    "header"
+    "theoriesbackground"
+    "footer";
+}
+.theoriesbackground{
+    grid-area: theoriesbackground;
+    width: 100%;
+    background-image: url(../img/background.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.h1{
+    font-style: italic;
+    background-color:antiquewhite;
+    position: relative;
+    top: 40px;
+    left: 360px;
+}
+.p1{
+    background-color: antiquewhite;
+    position: relative;
+    top: 160px;
+    left: 100px;
+    vertical-align: middle;
+    text-align: center;
+    max-width: 50%;
+}
+.p2{
+    background-color:antiquewhite;
+    position: relative;
+    top: 200px;
+    left: 400px;
+    vertical-align: middle;
+    text-align: center;
+    max-width: 50%;
+}
+.h2{
+    font-style: italic;
+    background-color:antiquewhite;
+    position: relative;
+    top: 270px;
+    left: 600px;
+}
+.p3{
+    background-color:antiquewhite;
+    position: relative;
+    top: 330px;
+    left: 100px;
+    vertical-align: middle;
+    text-align: center;
+    max-width: 50%;
+}
+/*albums*/
+.gridalb{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 800px auto;
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+}
+.backalbums{
+    background-color: rgb(180, 123, 180);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas:
+    "TS fearless speaknow ared a1989"
+    "reputation lover evermore fearlessTV redTV";
+}
+.TS{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: 25px;
+    left: 30px;
+    grid-area: TS;
+}
+.a1{
+    position: absolute;
+    left: 100px;
+    top: 350px;
+    text-align: center;
+}
+.fearless{
+    height: 200px;
+    width: 200px;
+    top: 25px;
+    position: relative;
+    grid-area: fearless;
+}
+.a2{
+    position: absolute;
+    left: 330px;
+    top: 350px;
+    text-align: center;
+}
+.speaknow{
+    height: 200px;
+    width: 200px;
+    top: 25px;
+    position: relative;
+    grid-area: speaknow;
+}
+.a3{
+    position: absolute;
+    left: 620px;
+    top: 350px;
+    text-align: center;
+}
+.red{
+    height: 200px;
+    width: 200px;
+    top: 25px;
+    position: relative;
+    grid-area: ared;
+}
+.a4{
+    position: absolute;
+    left: 890px;
+    top: 350px;
+}
+.a1989{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: 25px;
+    grid-area: a1989;
+}
+.a5{
+    position: absolute;
+    left: 1170px;
+    top: 350px;
+}
+.reputation{
+    height: 200px;
+    width: 200px;
+    left: 30px;
+    position: relative;
+    grid-area: reputation;
+}
+.a6{
+    position: absolute;
+    left: 80px;
+    top: 720px;
+}
+.lover{
+    height: 200px;
+    width: 200px;
+    grid-area: lover;
+}
+.a7{
+    position: absolute;
+    left: 350px;
+    top: 720px;
+}
+.evermore{
+    height: 200px;
+    width: 200px; 
+}
+.a8{
+    position: absolute;
+    left: 600px;
+    top: 720px;
+}
+.fearlessTV{
+    height: 200px;
+    width: 200px;
+}
+.a9{
+    position: absolute;
+    left: 830px;
+    top: 720px;
+    text-align: center;
+}
+.redTV{
+    height: 200px;
+    width: 200px;
+
+}
+.a10{
+    position: absolute;
+    left: 1100px;
+    top: 720px;
+    text-align: center;
+}
+/*Contact*/
+.containercon{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 800px auto;
+    grid-template-areas: 
+    "header"
+    "backgrounds"
+    "footer";
+}
+.background{
+    background-image: url(../img/contact.jpg);
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+.containerform{
+    grid-area: backgrounds;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: repeat(4, 25%);
+    grid-template-areas:
+    ". ch ."
+    ". . ."
+    ".form ."
+    ". . .";
+}
+.ch1{
+    font-family: Arial;
+    grid-area: ch;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+.form{
+    grid-area: form;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+.referencia{
+    text-decoration: none;
+    color: black;
+   font-family: serif;
+}
+.name{
+    margin-bottom: 20px;
+}
+.email{
+    margin-bottom: 20px;
+}
+.title{
+    margin-bottom: 20px;
+}
+.message{
+    margin-bottom: 20px;
+}
+.send{
+    margin-bottom: 20px;
+    margin-left: 90px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+    .live, .theories, .albums, .contact, .index{
+        background-color: blueviolet;
+    }
+    .header{
+        background-position: center center;
+    }
+    .livebackground{
+        background-position: center center;
+    }
+    .iframe{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 155%;
+    }
+    .backalbums{
+        background-repeat: repeat;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .TS, .a1, .fearless, .a2, .speaknow, .a3, .red, .a4, .a1989, .a5, .reputation, .a6, .lover, .a7, .evermore, .a8, .fearlessTV, .a9, .redTV, .a10{
+        flex-basis: 100%;
+    }
+    }
+
