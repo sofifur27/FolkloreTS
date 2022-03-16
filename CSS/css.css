@@ -147,16 +147,21 @@
     grid-template-rows: 25% 50% 25%;
     grid-template-areas:
     ". . ."
-    ". iframe ."
+    ". carrousel2 ."
     ". . .";
 }
-.iframe{
-    grid-area: iframe;
-    width: 100%;
+.carousel-inner, .carousel{
+    grid-area: carrousel;
+    height: 100%;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+}
+.carousel-item, .active{
+    width: 100%;
+    background-size: cover;
+    background-size: center center;
 }
 /*theories*/
 .container3{
