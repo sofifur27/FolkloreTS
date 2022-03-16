@@ -179,46 +179,26 @@
 .h1{
     font-style: italic;
     background-color:antiquewhite;
-    position: relative;
-    top: 40px;
-    left: 360px;
 }
 .p1{
     background-color: antiquewhite;
-    position: relative;
-    top: 160px;
-    left: 100px;
-    vertical-align: middle;
-    text-align: center;
-    max-width: 50%;
 }
 .p2{
     background-color:antiquewhite;
-    position: relative;
-    top: 200px;
-    left: 400px;
-    vertical-align: middle;
-    text-align: center;
-    max-width: 50%;
 }
 .h2{
     font-style: italic;
     background-color:antiquewhite;
-    position: relative;
-    top: 270px;
-    left: 600px;
 }
 .p3{
     background-color:antiquewhite;
-    position: relative;
-    top: 330px;
-    left: 100px;
-    vertical-align: middle;
-    text-align: center;
-    max-width: 50%;
 }
+.row{
+    margin-right: 0;
+}
+
 /*albums*/
-.gridalb{
+.gridalb{                                                                                                   
     display: grid;
     height: 100vh;
     grid-template-rows: 100px 800px auto;
@@ -234,60 +214,48 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100%;
-    grid-area: section;
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(2, 50%);
-    grid-template-areas:
-    "TS fearless speaknow ared a1989"
-    "reputation lover evermore fearlessTV redTV";
+    grid-area: section; 
+}
+.row1{
+    margin-top: 25px;
+}
+.row2{
+    margin-top: 170px;
 }
 .TS{
     height: 200px;
     width: 200px;
-    position: relative;
-    top: 25px;
-    left: 30px;
-    grid-area: TS;
+    margin-left: 115px;
 }
 .a1{
     position: absolute;
-    left: 100px;
+    left: 185px;
     top: 350px;
     text-align: center;
 }
 .fearless{
     height: 200px;
     width: 200px;
-    top: 25px;
-    position: relative;
-    grid-area: fearless;
 }
 .a2{
     position: absolute;
-    left: 330px;
+    left: 400px;
     top: 350px;
     text-align: center;
 }
 .speaknow{
     height: 200px;
     width: 200px;
-    top: 25px;
-    position: relative;
-    grid-area: speaknow;
 }
 .a3{
     position: absolute;
-    left: 620px;
+    left: 650px;
     top: 350px;
     text-align: center;
 }
 .red{
     height: 200px;
     width: 200px;
-    top: 25px;
-    position: relative;
-    grid-area: ared;
 }
 .a4{
     position: absolute;
@@ -297,35 +265,29 @@
 .a1989{
     height: 200px;
     width: 200px;
-    position: relative;
-    top: 25px;
-    grid-area: a1989;
 }
 .a5{
     position: absolute;
-    left: 1170px;
+    left: 1120px;
     top: 350px;
 }
 .reputation{
     height: 200px;
     width: 200px;
-    left: 30px;
-    position: relative;
-    grid-area: reputation;
+    margin-left: 115px;
 }
 .a6{
     position: absolute;
-    left: 80px;
+    left: 170px;
     top: 720px;
 }
 .lover{
     height: 200px;
     width: 200px;
-    grid-area: lover;
 }
 .a7{
     position: absolute;
-    left: 350px;
+    left: 420px;
     top: 720px;
 }
 .evermore{
@@ -334,7 +296,7 @@
 }
 .a8{
     position: absolute;
-    left: 600px;
+    left: 630px;
     top: 720px;
 }
 .fearlessTV{
@@ -343,7 +305,7 @@
 }
 .a9{
     position: absolute;
-    left: 830px;
+    left: 820px;
     top: 720px;
     text-align: center;
 }
@@ -354,10 +316,11 @@
 }
 .a10{
     position: absolute;
-    left: 1100px;
+    left: 1050px;
     top: 720px;
     text-align: center;
 }
+
 /*Contact*/
 .containercon{
     display: grid;
@@ -385,6 +348,15 @@
     ".form ."
     ". . .";
 }
+.form{
+    grid-area: form;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
 .ch1{
     font-family: Arial;
     grid-area: ch;
@@ -397,35 +369,10 @@
     align-self: center;
     text-align: center;
 }
-.form{
-    grid-area: form;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    justify-self: center;
-    align-self: center;
-}
 .referencia{
     text-decoration: none;
     color: black;
    font-family: serif;
-}
-.name{
-    margin-bottom: 20px;
-}
-.email{
-    margin-bottom: 20px;
-}
-.title{
-    margin-bottom: 20px;
-}
-.message{
-    margin-bottom: 20px;
-}
-.send{
-    margin-bottom: 20px;
-    margin-left: 90px;
 }
 
 /* Media Queries */
