@@ -99,6 +99,7 @@
     background-position: center center;
     width: 100%;
     height: 800px;
+    grid-area: back;
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 25% 50% 25%;
@@ -385,26 +386,46 @@
 @media screen and (max-width: 480px) {
     .live, .theories, .albums, .contact, .index{
         background-color: blueviolet;
-    }
+        }
     .header{
         background-position: center center;
-    }
+        }
     .livebackground{
         background-position: center center;
-    }
+        }
     .iframe{
         grid-column-start: 1;
         grid-column-end: 3;
         width: 155%;
+        }
     }
-    .backalbums{
+    @media screen and (max-width: 480px) {
+        .backalbums{
         background-repeat: repeat;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
-    .TS, .a1, .fearless, .a2, .speaknow, .a3, .red, .a4, .a1989, .a5, .reputation, .a6, .lover, .a7, .evermore, .a8, .fearlessTV, .a9, .redTV, .a10{
+        }
+        .TS, .a1, .fearless, .a2, .speaknow, .a3, .red, .a4, .a1989, .a5, .reputation, .a6, .lover, .a7, .evermore, .a8, .fearlessTV, .a9, .redTV, .a10{
         flex-basis: 100%;
+        }
     }
+    @media screen and (max-width: 480px){
+    .back{
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 25% 50% 25%;
+        grid-template-areas:
+            ". . ."
+            ". carrousel ."
+            ". . .";
+        }
+    .carousel-inner, .carousel{
+        grid-area: carrousel;
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        }
     }
-
