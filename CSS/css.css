@@ -72,6 +72,9 @@
     transition: width 200ms ease-in;
 }
 /*index*/
+.menuhamb{
+    display: none;
+}
 .container1{
     display: grid;
     height: 100vh;
@@ -178,9 +181,9 @@
     grid-area: theoriesbackground;
     width: 100%;
     background-image: url(../img/background.jpg);
-    background-position: center top;
     background-size: cover;
     background-attachment: fixed;
+    height: fit-content;
 }
 .h1{
     font-style: italic;
@@ -382,14 +385,8 @@
 }
 
 /* Media Queries */
-
+/*general & live*/
 @media screen and (max-width: 480px) {
-    .live, .theories, .albums, .contact, .index{
-        background-color: blueviolet;
-        }
-    .header{
-        background-position: center center;
-        }
     .livebackground{
         background-position: center center;
         }
@@ -399,19 +396,13 @@
         width: 155%;
         }
     }
-    @media screen and (max-width: 480px) {
-        .backalbums{
-        background-repeat: repeat;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        }
-        .TS, .a1, .fearless, .a2, .speaknow, .a3, .red, .a4, .a1989, .a5, .reputation, .a6, .lover, .a7, .evermore, .a8, .fearlessTV, .a9, .redTV, .a10{
-        flex-basis: 100%;
-        }
-    }
+    /*index*/
     @media screen and (max-width: 480px){
+    .header{
+        height: 100px;
+    }
     .back{
+        height: 800px;
         display: grid;
         grid-template-columns: 25% 50% 25%;
         grid-template-rows: 25% 50% 25%;
@@ -427,5 +418,150 @@
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 3;
+        }
+    .imagen1{
+       height: 400px; 
+    }
+    .botones{
+        display: none;
+    }
+    .menuhamb{
+        display: block;
+    }
+    .btn-group{
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .btn{
+        background-color: #736AB5;
+        border-color: rgb(114, 6, 114);
+    }
+}
+    /*albums*/
+    @media screen and (max-width: 480px) {
+        .row, .row1, .row2{
+            display: block;
+        }
+        .gridalb{                                                                                                   
+            display: grid;
+            height: 100vh;
+            grid-template-rows: 100px auto auto;
+            grid-template-areas: 
+            "header"
+            "section"
+            "footer";
+        }
+        .backalbums{
+            background-size: cover;
+            height: fit-content;
+            background-attachment: inherit;
+            grid-area: section; 
+        }
+        .TS{
+            margin-left: 10px;
+            height: 180px;
+            width: 180px;
+        }
+        .a1{
+            position: inherit;
+            margin-right: 280px;
+        }
+        .fearless{
+            margin-left: 260px;
+            margin-top: -335px;
+            height: 180px;
+            width: 180px;
+        }
+        .a2{
+            left: 320px;
+            top: 310px;
+        }
+        .speaknow{
+            margin-left: 140px;
+            margin-top: -30px;
+            height: 180px;
+            width: 180px;
+        }
+        .a3{
+            position: inherit;
+        }
+        .red{
+            height: 180px;
+            width: 180px;
+            margin-left: 10px;
+        }
+        .a4{
+            position: inherit;
+            margin-left: 80px;
+        }
+        .a1989{
+            height: 180px;
+            width: 180px;
+            margin-top: -288px;
+            margin-left: 260px;
+        }
+        .a5{
+            position: inherit;
+            margin-top: -62px;
+            margin-left: 330px;
+        }
+        .reputation{
+            margin-left: 10px;
+            margin-top: -120px;
+            height: 180px;
+            width: 180px;
+        }
+        .a6{
+            position: inherit;
+            margin-left: 50px;
+        }
+        .lover{
+            margin-left: 260px;
+            margin-top: -285px;
+            height: 180px;
+            width: 180px;
+        }
+        .a7{
+            position: inherit;
+            margin-top: -64px;
+            margin-left: 330px;
+        }
+        .evermore{
+            margin-left: 140px;
+            height: 180px;
+            width: 180px;
+        }
+        .a8{
+            position: inherit;
+            margin-left: 189px;
+        }
+        .fearlessTV{
+            height: 180px;
+            width: 180px;
+            margin-left: 10px;
+        }
+        .a9{
+            position: inherit;
+            margin-right: 260px;
+            margin-top: 5px;
+        }
+        .redTV{
+            margin-left: 260px;
+            margin-top: -345px;
+            height: 180px;
+            width: 180px;
+        }
+        .a10{
+            position: inherit;
+            margin-top: -87px;
+            margin-left: 240px;
+        }
+    }
+    /*theories*/
+    @media screen and (max-width: 480px){
+        .theoriesbackground{
+            background-size: cover;
+            background-attachment:inherit;
+            height: fit-content;
         }
     }
