@@ -110,16 +110,18 @@
     background-attachment: fixed;
     height: fit-content;
 }
-.h1{
+@mixin font-title{
     font-style: italic;
     background-color:antiquewhite;
 }
+.h1{
+    @include font-title;
+}
 .p1, .p2, .p3{
-            background-color:antiquewhite;
-        }
-.h2{
-    font-style: italic;
     background-color:antiquewhite;
+}
+.h2{
+    @include font-title;
 }
 .row{
     margin-right: 0;
@@ -127,7 +129,7 @@
 /*albums*/
 .gridalb{                                                                                                   
     display: grid;
-    height: 100vh;
+    height: auto;
     grid-template-rows: 100px 800px auto;
     grid-template-areas: 
     "header"
@@ -154,15 +156,21 @@
     width: 200px;
     margin-left: 115px;
 }
+.a1989{
+    @extend.TS;
+    margin-left: 0px;
+}
+.reputation{
+    @extend.TS;
+}
+.redTS{
+    @extend.a1989;
+}
 .a1{
     position: absolute;
     left: 185px;
     top: 350px;
     text-align: center;
-}
-.fearless{
-    height: 200px;
-    width: 200px;
 }
 .a2{
     position: absolute;
@@ -170,76 +178,42 @@
     top: 350px;
     text-align: center;
 }
-.speaknow{
-    height: 200px;
-    width: 200px;
-}
 .a3{
     position: absolute;
     left: 650px;
     top: 350px;
     text-align: center;
 }
-.red{
-    height: 200px;
-    width: 200px;
-}
 .a4{
     position: absolute;
     left: 890px;
     top: 350px;
-}
-.a1989{
-    height: 200px;
-    width: 200px;
 }
 .a5{
     position: absolute;
     left: 1120px;
     top: 350px;
 }
-.reputation{
-    height: 200px;
-    width: 200px;
-    margin-left: 115px;
-}
 .a6{
     position: absolute;
     left: 170px;
     top: 720px;
-}
-.lover{
-    height: 200px;
-    width: 200px;
 }
 .a7{
     position: absolute;
     left: 420px;
     top: 720px;
 }
-.evermore{
-    height: 200px;
-    width: 200px; 
-}
 .a8{
     position: absolute;
     left: 630px;
     top: 720px;
-}
-.fearlessTV{
-    height: 200px;
-    width: 200px;
 }
 .a9{
     position: absolute;
     left: 820px;
     top: 720px;
     text-align: center;
-}
-.redTV{
-    height: 200px;
-    width: 200px;
-
 }
 .a10{
     position: absolute;
@@ -296,9 +270,27 @@
         margin-top: 30px;
         margin-left: 20px;
     }
+    $colors: (
+        bg: #736AB5,
+        bg-dark: rgb(133, 44, 133),
+        borders: rgb(114, 6, 114)
+    );
+     $btnbg: map-get($map: $colors, $key: bg);
+     $border: map-get($map: $colors, $key: borders);
+     $darker: map-get($map: $colors, $key: bg-dark);
+
     .btn{
-        background-color: #736AB5;
-        border-color: rgb(114, 6, 114);
+    background-color: $btnbg;
+    border-color: $border;
+    }
+    .btn-primary{
+        &focus{
+        background-color: $darker;
+        border-color: $border;
+    }
+    }
+    .btn-primary:hover{
+        @extend.btn-primaryfocus
     }
 }
 /*albums*/

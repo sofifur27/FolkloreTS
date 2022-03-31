@@ -19,11 +19,7 @@
     }
     }
     .theories{
-        background-color: #736AB5;
-        color: white;
-        border: solid 1px black;
-        margin: auto;
-        margin-top: 30px;
+        @extend.live;
     &:hover{
         color: #736AB5;
         background-color: white;
@@ -31,11 +27,7 @@
     }
     }
     .albums{
-        background-color: #736AB5;
-        color: white;
-        border: solid 1px black;
-        margin: auto;
-        margin-top: 30px;
+        @extend.live;
     &:hover{
         color: #736AB5;
         background-color: white;
@@ -43,11 +35,7 @@
     }
     }
     .contact{
-        background-color: #736AB5;
-        color: white;
-        border: solid 1px black;
-        margin: auto;
-        margin-top: 30px;
+        @extend.live;
     &:hover{
         color: #736AB5;
     background-color: white;
@@ -55,12 +43,7 @@
     }
     }
     .index{
-        background-color: #736AB5;
-        color: white;
-        border: solid 1px black;
-        display: inline-block;
-        margin: auto;
-        margin-top: 30px;
+        @extend.live;
     &:hover{
         color: #736AB5;
         background-color: white;

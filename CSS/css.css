@@ -7,66 +7,37 @@
   gap: 30px;
 }
 
-.live {
+.live, .index, .contact, .albums, .theories {
   background-color: #736AB5;
   color: white;
   border: solid 1px black;
   margin: auto;
   margin-top: 30px;
 }
-.live:hover {
+.live:hover, .index:hover, .contact:hover, .albums:hover, .theories:hover {
   color: #736AB5;
   background-color: white;
   transition: width 200ms ease-in;
 }
 
-.theories {
-  background-color: #736AB5;
-  color: white;
-  border: solid 1px black;
-  margin: auto;
-  margin-top: 30px;
-}
 .theories:hover {
   color: #736AB5;
   background-color: white;
   transition: width 200ms ease-in;
 }
 
-.albums {
-  background-color: #736AB5;
-  color: white;
-  border: solid 1px black;
-  margin: auto;
-  margin-top: 30px;
-}
 .albums:hover {
   color: #736AB5;
   background-color: white;
   transition: width 200ms ease-in;
 }
 
-.contact {
-  background-color: #736AB5;
-  color: white;
-  border: solid 1px black;
-  margin: auto;
-  margin-top: 30px;
-}
 .contact:hover {
   color: #736AB5;
   background-color: white;
   transition: width 200ms ease-in;
 }
 
-.index {
-  background-color: #736AB5;
-  color: white;
-  border: solid 1px black;
-  display: inline-block;
-  margin: auto;
-  margin-top: 30px;
-}
 .index:hover {
   color: #736AB5;
   background-color: white;
@@ -348,7 +319,7 @@ body {
 /*albums*/
 .gridalb {
   display: grid;
-  height: 100vh;
+  height: auto;
   grid-template-rows: 100px 800px auto;
   grid-template-areas: "header" "section" "footer";
 }
@@ -371,10 +342,14 @@ body {
   margin-top: 170px;
 }
 
-.TS {
+.TS, .reputation, .a1989, .redTS {
   height: 200px;
   width: 200px;
   margin-left: 115px;
+}
+
+.a1989, .redTS {
+  margin-left: 0px;
 }
 
 .a1 {
@@ -384,21 +359,11 @@ body {
   text-align: center;
 }
 
-.fearless {
-  height: 200px;
-  width: 200px;
-}
-
 .a2 {
   position: absolute;
   left: 400px;
   top: 350px;
   text-align: center;
-}
-
-.speaknow {
-  height: 200px;
-  width: 200px;
 }
 
 .a3 {
@@ -408,20 +373,10 @@ body {
   text-align: center;
 }
 
-.red {
-  height: 200px;
-  width: 200px;
-}
-
 .a4 {
   position: absolute;
   left: 890px;
   top: 350px;
-}
-
-.a1989 {
-  height: 200px;
-  width: 200px;
 }
 
 .a5 {
@@ -430,21 +385,10 @@ body {
   top: 350px;
 }
 
-.reputation {
-  height: 200px;
-  width: 200px;
-  margin-left: 115px;
-}
-
 .a6 {
   position: absolute;
   left: 170px;
   top: 720px;
-}
-
-.lover {
-  height: 200px;
-  width: 200px;
 }
 
 .a7 {
@@ -453,20 +397,10 @@ body {
   top: 720px;
 }
 
-.evermore {
-  height: 200px;
-  width: 200px;
-}
-
 .a8 {
   position: absolute;
   left: 630px;
   top: 720px;
-}
-
-.fearlessTV {
-  height: 200px;
-  width: 200px;
 }
 
 .a9 {
@@ -474,11 +408,6 @@ body {
   left: 820px;
   top: 720px;
   text-align: center;
-}
-
-.redTV {
-  height: 200px;
-  width: 200px;
 }
 
 .a10 {
@@ -545,6 +474,11 @@ body {
     background-color: #736AB5;
     border-color: #720672;
   }
+
+  .btn-primaryfocus, .btn-primary:hover {
+    background-color: #852c85;
+    border-color: #720672;
+  }
 }
 /*albums*/
 @media screen and (max-width: 480px) {
@@ -566,7 +500,7 @@ body {
     grid-area: section;
   }
 
-  .TS {
+  .TS, .a1989, .reputation, .redTS {
     margin-left: 10px;
     height: 180px;
     width: 180px;
@@ -611,7 +545,7 @@ body {
     margin-left: 80px;
   }
 
-  .a1989 {
+  .a1989, .redTS {
     height: 180px;
     width: 180px;
     margin-top: -288px;
