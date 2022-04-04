@@ -8,7 +8,7 @@
     "backgrounds"
     "footer";
 }
-body {
+.bodycont{
     background: linear-gradient(132deg, #9f31ca, #1665c1);
     background-size: 400% 400%;
     animation: BackgroundGradient 10s ease infinite;
@@ -62,8 +62,7 @@ body {
     text-decoration: none;
     color: black;
    font-family: serif;
-}
-:root {
+&root {
 	--delay: 1s;
 	--duration: 1500ms;
 	--iterations: 1;
@@ -131,6 +130,7 @@ body {
 	100% {
 		transform: scaleX(0);
 	}
+}
 }
 @media screen and (max-width: 480px){
 	.ch1{

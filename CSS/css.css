@@ -52,7 +52,7 @@
   grid-template-areas: "header" "backgrounds" "footer";
 }
 
-body {
+.bodycont {
   background: linear-gradient(132deg, #9f31ca, #1665c1);
   background-size: 400% 400%;
   animation: BackgroundGradient 10s ease infinite;
@@ -114,23 +114,20 @@ body {
   color: black;
   font-family: serif;
 }
-
-:root {
+.referenciaroot {
   --delay: 1s;
   --duration: 1500ms;
   --iterations: 1;
 }
-
-.reveal-text,
-.reveal-text::after {
+.referencia .reveal-text,
+.referencia .reveal-text::after {
   animation-delay: var(--animation-delay, 1s);
   animation-iteration-count: var(--iterations, 1);
   animation-duration: var(--duration, 1200ms);
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
-
-.reveal-text {
+.referencia .reveal-text {
   --animation-delay: var(--delay, 0);
   --animation-duration: var(--duration, 1000ms);
   --animation-iterations: var(--iterations, 1);
@@ -141,7 +138,7 @@ body {
   white-space: wrap;
   cursor: default;
 }
-.reveal-text::after {
+.referencia .reveal-text::after {
   content: "";
   position: absolute;
   z-index: 999;
@@ -155,7 +152,6 @@ body {
   pointer-events: none;
   animation-name: text-revealer;
 }
-
 @keyframes clip-text {
   from {
     clip-path: inset(0 100% 0 0);
@@ -178,6 +174,7 @@ body {
     transform: scaleX(0);
   }
 }
+
 @media screen and (max-width: 480px) {
   .ch1 {
     grid-column-start: 1;
@@ -190,6 +187,40 @@ body {
   grid-area: footer;
   width: 100%;
   background-color: #796d6d;
+}
+
+/*albums*/
+.gridalb {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 100px 800px auto;
+  grid-template-areas: "header" "albums" "footer";
+}
+
+.albumcarousel {
+  background-color: violet;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 800px;
+  grid-area: albums;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas: ". . ." ". carrousel2 ." ". . .";
+}
+
+.carousel-inner, .carousel {
+  grid-area: carrousel2;
+  height: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  margin-top: 300px;
 }
 
 /*index*/
@@ -267,7 +298,7 @@ body {
 }
 
 .carousel-inner, .carousel {
-  grid-area: carrousel;
+  grid-area: carrousel2;
   height: 100%;
   grid-column-start: 2;
   grid-column-end: 3;
@@ -314,107 +345,6 @@ body {
 
 .row {
   margin-right: 0;
-}
-
-/*albums*/
-.gridalb {
-  display: grid;
-  height: auto;
-  grid-template-rows: 100px 800px auto;
-  grid-template-areas: "header" "section" "footer";
-}
-
-.backalbums {
-  background-color: #b47bb4;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 100%;
-  grid-area: section;
-}
-
-.row1 {
-  margin-top: 25px;
-}
-
-.row2 {
-  margin-top: 170px;
-}
-
-.TS, .reputation, .a1989, .redTS {
-  height: 200px;
-  width: 200px;
-  margin-left: 115px;
-}
-
-.a1989, .redTS {
-  margin-left: 0px;
-}
-
-.a1 {
-  position: absolute;
-  left: 185px;
-  top: 350px;
-  text-align: center;
-}
-
-.a2 {
-  position: absolute;
-  left: 400px;
-  top: 350px;
-  text-align: center;
-}
-
-.a3 {
-  position: absolute;
-  left: 650px;
-  top: 350px;
-  text-align: center;
-}
-
-.a4 {
-  position: absolute;
-  left: 890px;
-  top: 350px;
-}
-
-.a5 {
-  position: absolute;
-  left: 1120px;
-  top: 350px;
-}
-
-.a6 {
-  position: absolute;
-  left: 170px;
-  top: 720px;
-}
-
-.a7 {
-  position: absolute;
-  left: 420px;
-  top: 720px;
-}
-
-.a8 {
-  position: absolute;
-  left: 630px;
-  top: 720px;
-}
-
-.a9 {
-  position: absolute;
-  left: 820px;
-  top: 720px;
-  text-align: center;
-}
-
-.a10 {
-  position: absolute;
-  left: 1050px;
-  top: 720px;
-  text-align: center;
 }
 
 /* Media Queries */
@@ -478,145 +408,6 @@ body {
   .btn-primaryfocus, .btn-primary:hover {
     background-color: #852c85;
     border-color: #720672;
-  }
-}
-/*albums*/
-@media screen and (max-width: 480px) {
-  .row, .row1, .row2 {
-    display: block;
-  }
-
-  .gridalb {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 100px auto auto;
-    grid-template-areas: "header" "section" "footer";
-  }
-
-  .backalbums {
-    background-size: cover;
-    height: fit-content;
-    background-attachment: inherit;
-    grid-area: section;
-  }
-
-  .TS, .a1989, .reputation, .redTS {
-    margin-left: 10px;
-    height: 180px;
-    width: 180px;
-  }
-
-  .a1 {
-    position: inherit;
-    margin-right: 280px;
-  }
-
-  .fearless {
-    margin-left: 260px;
-    margin-top: -335px;
-    height: 180px;
-    width: 180px;
-  }
-
-  .a2 {
-    left: 320px;
-    top: 310px;
-  }
-
-  .speaknow {
-    margin-left: 140px;
-    margin-top: -30px;
-    height: 180px;
-    width: 180px;
-  }
-
-  .a3 {
-    position: inherit;
-  }
-
-  .red {
-    height: 180px;
-    width: 180px;
-    margin-left: 10px;
-  }
-
-  .a4 {
-    position: inherit;
-    margin-left: 80px;
-  }
-
-  .a1989, .redTS {
-    height: 180px;
-    width: 180px;
-    margin-top: -288px;
-    margin-left: 260px;
-  }
-
-  .a5 {
-    position: inherit;
-    margin-top: -62px;
-    margin-left: 330px;
-  }
-
-  .reputation {
-    margin-left: 10px;
-    margin-top: -120px;
-    height: 180px;
-    width: 180px;
-  }
-
-  .a6 {
-    position: inherit;
-    margin-left: 50px;
-  }
-
-  .lover {
-    margin-left: 260px;
-    margin-top: -285px;
-    height: 180px;
-    width: 180px;
-  }
-
-  .a7 {
-    position: inherit;
-    margin-top: -64px;
-    margin-left: 330px;
-  }
-
-  .evermore {
-    margin-left: 140px;
-    height: 180px;
-    width: 180px;
-  }
-
-  .a8 {
-    position: inherit;
-    margin-left: 189px;
-  }
-
-  .fearlessTV {
-    height: 180px;
-    width: 180px;
-    margin-left: 10px;
-  }
-
-  .a9 {
-    position: inherit;
-    margin-right: 260px;
-    margin-top: 5px;
-  }
-
-  .redTV {
-    margin-left: 260px;
-    margin-top: -345px;
-    height: 180px;
-    width: 180px;
-  }
-
-  .a10 {
-    position: inherit;
-    margin-top: -87px;
-    margin-left: 240px;
   }
 }
 /*theories*/
