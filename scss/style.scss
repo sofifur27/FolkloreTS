@@ -1,7 +1,6 @@
 @import"./botones";
 @import"./contact";
 @import"./footer";
-@import"./albums";
 /*index*/
 .menuhamb{
     display: none;
@@ -52,7 +51,7 @@
     }
 .carousel-item, .active{
     width: 100%;
-    background-size: cover;
+    background-size:cover;
     background-size: center center;
     }
 /*live*/
@@ -93,6 +92,40 @@
     background-size: cover;
     background-size: center center;
 }
+/*albums*/
+.gridalb {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 800px auto;
+    grid-template-areas: 
+    "header"
+    "background"
+    "footer";
+  }
+  .albumbackground {
+    grid-area: background;
+    background-color: rgb(196, 109, 196);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas: 
+    ". . ." 
+    ". carrousel3 ." 
+    ". . .";
+  }
+  .indicators{
+    margin-bottom: 0px;
+    }
+  .cuerpocarousel{
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
 /*theories*/
 .container3{
     display: grid;
