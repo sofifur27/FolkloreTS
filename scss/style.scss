@@ -121,11 +121,30 @@
     margin-bottom: 0px;
     }
   .cuerpocarousel{
+      grid-area: carrousel3;
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 2;
       grid-row-end: 3;
     }
+    .prev{
+        margin-left: -100px;
+    }
+    .next{
+        margin-right: -100px;
+    }
+@media screen and (max-width: 480px){
+.cuerpocarousel{
+    width: 350px;
+    margin-left: 60px;
+    }
+    .prev{
+        margin-left: 0px;
+    }
+    .next{
+        margin-right: 0px;
+    }
+}
 /*theories*/
 .container3{
     display: grid;
