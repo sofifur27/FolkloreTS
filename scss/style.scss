@@ -157,6 +157,9 @@
         margin-right: 0px;
         position: absolute;
     }
+    .titalb{
+        text-decoration: underline wavy;
+    }
 }
 /*theories*/
 .container3{
@@ -203,6 +206,19 @@
         grid-column-start: 1;
         grid-column-end: 3;
         width: 155%;
+        }
+    .cuerpocarousel{
+        max-width: 440px;
+        padding-left: 60px;
+        padding-right: 40px;
+        }
+        .prev{
+            margin-left: 0px;
+            position: absolute;
+        }
+        .next{
+            margin-right: 0px;
+            position: absolute;
         }
     }
 /*general & index*/
