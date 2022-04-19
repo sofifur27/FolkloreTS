@@ -113,7 +113,7 @@
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 25% 50% 25%;
     grid-template-areas: 
-    ". . ." 
+    ". title ." 
     ". carrousel3 ." 
     ". . .";
   }
@@ -133,16 +133,29 @@
     .next{
         margin-right: -100px;
     }
+    .titalb{
+        grid-area: title;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: center;
+        text-decoration:underline overline;
+        text-decoration-color: #692b81;
+        }
 @media screen and (max-width: 480px){
-.cuerpocarousel{
-    width: 350px;
-    margin-left: 60px;
+    .cuerpocarousel{
+    max-width: 440px;
+    padding-left: 60px;
+    padding-right: 40px;
     }
     .prev{
         margin-left: 0px;
+        position: absolute;
     }
     .next{
         margin-right: 0px;
+        position: absolute;
     }
 }
 /*theories*/

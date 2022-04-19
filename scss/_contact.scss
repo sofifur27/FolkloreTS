@@ -9,7 +9,7 @@
     "footer";
 }
 .bodycont{
-    background: linear-gradient(132deg, #9f31ca, #1665c1);
+    background: linear-gradient(132deg, #641d80, #c04fc4);
     background-size: 400% 400%;
     animation: BackgroundGradient 10s ease infinite;
   }
@@ -57,12 +57,17 @@
     justify-self: center;
     align-self: center;
     text-align: center;
+    color: black;
 }
 .referencia{
  color: black;
  :hover{
 	 color: rgb(180, 17, 17);
  }
+}
+.send{
+    background-color: rgb(158, 70, 158);
+    border-radius: 5px;
 }
 @media screen and (max-width: 480px){
 	.ch1{

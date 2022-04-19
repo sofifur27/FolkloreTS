@@ -5,6 +5,15 @@
   flex-direction: row;
   justify-content: center;
   gap: 30px;
+  box-shadow: 2px 3px 10px #000;
+  box-sizing: border-box;
+}
+.botones:hover {
+  box-shadow: 3px 4px 30px #000;
+  text-shadow: 0 0 0;
+}
+.botones:active {
+  box-shadow: 0 0 0;
 }
 
 .live, .index, .contact, .albums, .theories {
@@ -53,7 +62,7 @@
 }
 
 .bodycont {
-  background: linear-gradient(132deg, #9f31ca, #1665c1);
+  background: linear-gradient(132deg, #641d80, #c04fc4);
   background-size: 400% 400%;
   animation: BackgroundGradient 10s ease infinite;
 }
@@ -107,6 +116,7 @@
   justify-self: center;
   align-self: center;
   text-align: center;
+  color: black;
 }
 
 .referencia {
@@ -114,6 +124,11 @@
 }
 .referencia :hover {
   color: #b41111;
+}
+
+.send {
+  background-color: #9e469e;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 480px) {
@@ -237,7 +252,7 @@
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 25% 50% 25%;
-  grid-template-areas: ". . ." ". carrousel3 ." ". . .";
+  grid-template-areas: ". title ." ". carrousel3 ." ". . .";
 }
 
 .indicators {
@@ -260,18 +275,32 @@
   margin-right: -100px;
 }
 
+.titalb {
+  grid-area: title;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+  text-decoration: underline overline;
+  text-decoration-color: #692b81;
+}
+
 @media screen and (max-width: 480px) {
   .cuerpocarousel {
-    width: 350px;
-    margin-left: 60px;
+    max-width: 440px;
+    padding-left: 60px;
+    padding-right: 40px;
   }
 
   .prev {
     margin-left: 0px;
+    position: absolute;
   }
 
   .next {
     margin-right: 0px;
+    position: absolute;
   }
 }
 /*theories*/

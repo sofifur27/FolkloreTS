@@ -5,6 +5,15 @@
     flex-direction: row;
     justify-content: center;
     gap: 30px;
+    box-shadow: 2px 3px 10px #000;
+    box-sizing: border-box;
+    &:hover{
+        box-shadow: 3px 4px 30px #000;
+        text-shadow: 0 0 0 ;
+    }
+    &:active{
+        box-shadow: 0 0 0;
+    }
     }
     .live{
         background-color: #736AB5;
